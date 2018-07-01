@@ -13,7 +13,9 @@ loadjson("data.json",function(text){
 	let data=JSON.parse(text);
 	console.log(data);
 	basic(data.details);
-edu(data.education);
+	carr(data.career);
+	edu(data.education);
+	skill(data.skills);
 })
 var main=document.querySelector(".main");
 var left=document.createElement("div");
@@ -26,10 +28,10 @@ function basic(details) {
 	var name=document.createElement("h2");
 	name.textContent=details.name;
 	left.appendChild(name);
-	var email=document.createElement("h2");
+	var email=document.createElement("h3");
 	email.textContent=details.email;
 	left.appendChild(email);
-	var phone=document.createElement("h2");
+	var phone=document.createElement("h4");
 	phone.textContent=details.phone;
 	left.appendChild(phone);
 }
@@ -37,10 +39,15 @@ var right=document.createElement("div");
 right.classList.add("right");
 main.appendChild(right);
 function edu(education){
+	var e=document.createElement("h3");
+	e.textContent="Educational Details";
+	right.appendChild(e);
 	var un=document.createElement("ul");
 	right.appendChild(un);
+	e.appendChild(document.createElement("HR"));
+	e.appendChild(un);
 	for(var i=0; i<education.length; i++){
-		var l=document.createElement("li");
+		var l=document.createElement("h4");
 		l.textContent=education[i].course;
 		un.appendChild(l);
 		var l1=document.createElement("li");
@@ -50,7 +57,35 @@ function edu(education){
 		l2.textContent=education[i].school;
 		un.appendChild(l2);
 		var l3=document.createElement("li");
-		l3.textContent=education[i].course;
+		l3.textContent=education[i].per;
 		un.appendChild(l3);
 	}
+}
+function skill(skilldata){
+	var s=document.createElement("div");
+	s.classList.add("sset");
+	right.appendChild(s);
+	var head=document.createElement("h3");
+	head.textContent="Skills Set"
+	s.appendChild(head);
+	// s.appendChild(document.createElement("HR"));
+	var t=document.createElement("table");
+	var tabledata="";
+	for(var i=0; i<skilldata.length;i++){
+		tabledata+="<tr><td>"+skilldata[i].title+"</td><td>"+skilldata[i].output+"</td></tr>";
+		t.innerHTML=tabledata;
+	}
+	head.appendChild(t);
+}
+function carr(career){
+	var d=document.createElement("div");
+	d.classList.add("career");
+	right.appendChild(d);
+	var e=document.createElement("h1");
+	e.textContent="career objectives";
+	d.appendChild(e);
+	e.appendChild(document.createElement("HR"));
+	var para=document.createElement("p");
+	para.textContent=career.text;
+	e.appendChild(para);
 }

@@ -1,7 +1,7 @@
 {
 	"details":{
-		"name":"Mahesh",
-		"image":"mahesh.jpg",
+		"name":"usha",
+		"image":"images.jpg",
 		"phone":"9999998888",
 		"email":"kushamadhuri3@gmail.com"
 	},
@@ -18,9 +18,26 @@
 		},	
 		{
 			"course":"SSC",
-			"School":"Vijaya Rani High School",
+			"college":"Vijaya Rani High School",
 			"per":"93%"
 		}	
-	]
+	],
+	"skills":[
+		{
+			"title":"programing Language",
+			"output":[
+				"C","c++","Java","Python"
+			]
+		},
+		{
+			"title":"Operating systems",
+			"output":[
+				"Windows","Linux","MAC"
+			]
+		}
+	],
+	"career":{
+		"text":"To associate with organisation and utlize by technical skills"
 
+	}
 }
