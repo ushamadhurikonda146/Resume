@@ -1,13 +1,41 @@
 .main{
 	width:100%;
-	background-color: yellow;
+	background-color: blue;
 	display:flex;
+	justify-content: center;
+	text-align: center;
 }
 .left{
-	width: 30%;
-	border:3px solid yellow;
+	width: 68%;
+	border:3px solid red;
+	box-shadow: 3px 3px 3px green;
+	margin: 1%;
+	padding: 1%;
 }
 .right{
-	width: 70%;
+	width: 28%;
 	border:3px solid black;
+	box-shadow: 3px 3px 3px yellow;
+	margin: 1%;
+	padding: 1%;
+}
+img{
+	width: 300px;
+}
+h1,
+h2,
+h3{
+	font-size: 33px;
+}
+@media only screen and (min-width: 320px) and (max-width: 1000px){
+	.main{
+		display: flex;
+		flex-direction: column;
+	}
+	.left{
+		width: 100%;
+	}
+	.right{
+		width: 100%;
+	}
 }

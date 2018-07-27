@@ -1,0 +1,26 @@
+{
+	"details":{
+		"name":"Mahesh",
+		"image":"mahesh.jpg",
+		"phone":"9999998888",
+		"email":"kushamadhuri3@gmail.com"
+	},
+	"education":[
+		{
+			"course":"B.Tech(CSE)",
+			"college":"MIC college",
+			"per":"80%"
+		},
+		{
+			"course":"Intermediate(MPC)",
+			"college":"Narayana junior college",
+			"per":"91%"
+		},	
+		{
+			"course":"SSC",
+			"School":"Vijaya Rani High School",
+			"per":"93%"
+		}	
+	]
+
+}
